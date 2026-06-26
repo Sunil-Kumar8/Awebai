@@ -1,0 +1,1851 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web Development Services — AwebAI</title>
+    <meta name="description" content="AwebAI builds high-performance, conversion-oriented React & Next.js websites. Explore our web development process, philosophy, technology stack, and results.">
+    <meta name="keywords" content="web development services, Next.js developer, custom website design, React agency, high-performance websites">
+    <meta name="author" content="AwebAI Agency">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://localhost:8080/web-development.html">
+    <meta name="theme-color" content="#04060f">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Web Development Services — AwebAI">
+    <meta property="og:description" content="AwebAI builds high-performance Next.js websites, custom web applications, and stunning UI designs. See our technology stack and before/after transformations.">
+    <meta property="og:url" content="http://localhost:8080/web-development.html">
+    <meta property="og:image" content="assets/logos/logo.png">
+
+    <!-- Twitter Card Metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Web Development Services — AwebAI">
+    <meta name="twitter:description" content="AwebAI builds high-performance Next.js websites, custom web applications, and stunning UI designs. See our technology stack and before/after transformations.">
+    <meta name="twitter:image" content="assets/logos/logo.png">
+
+    <!-- Preloads -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Modular CSS System -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+
+    <!-- Custom Web Development Page Styles -->
+    <style>
+        .webdev-hero {
+            padding: 140px 0 80px;
+            background: var(--bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .webdev-hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        /* Hero Left Column styling */
+        .hero-capsule {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 14px;
+            border-radius: 100px;
+            background: rgba(37, 99, 235, 0.06);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            color: var(--blue2);
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 24px;
+        }
+
+        .hero-capsule svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2.5;
+        }
+
+        .webdev-hero h1 {
+            font-family: "Orbitron", sans-serif;
+            font-size: clamp(2rem, 4.2vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+            color: var(--white);
+        }
+
+        .webdev-hero .hero-desc {
+            font-size: 1.02rem;
+            color: var(--text);
+            line-height: 1.8;
+            margin-bottom: 36px;
+            max-width: 560px;
+        }
+
+        .hero-checklist {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .checklist-check {
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+        }
+
+        .checklist-check svg {
+            width: 10px;
+            height: 10px;
+            stroke-width: 3.5;
+        }
+
+        .checklist-text {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .checklist-text span {
+            display: block;
+            font-size: 0.78rem;
+            font-weight: 400;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        /* 3D Laptop Mockup and Floating Cards */
+        .laptop-mockup-wrapper {
+            position: relative;
+            width: 100%;
+            perspective: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .laptop-mockup {
+            position: relative;
+            width: 90%;
+            transform: rotateY(-10deg) rotateX(6deg);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-style: preserve-3d;
+        }
+
+        .laptop-mockup:hover {
+            transform: rotateY(0deg) rotateX(0deg);
+        }
+
+        .laptop-screen {
+            background: #080b11;
+            border: 12px solid #2d3748;
+            border-radius: 18px 18px 0 0;
+            aspect-ratio: 16/10;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 4, 16, 0.25);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .laptop-screen-content {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0f1d 0%, #05070e 100%);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .laptop-screen-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .screen-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding-bottom: 8px;
+            z-index: 2;
+        }
+
+        .screen-logo {
+            font-family: "Outfit", sans-serif;
+            font-weight: 800;
+            font-size: 0.75rem;
+            color: #fff;
+            letter-spacing: -0.02em;
+        }
+
+        .screen-logo span {
+            color: var(--blue2);
+        }
+
+        .screen-menu {
+            display: flex;
+            gap: 6px;
+        }
+
+        .screen-menu-dot {
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .screen-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            z-index: 2;
+            padding: 12px 6px;
+        }
+
+        .screen-tag {
+            font-size: 0.55rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--blue2);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .screen-main-heading {
+            font-size: 1.15rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #fff;
+            max-width: 180px;
+            letter-spacing: -0.01em;
+        }
+
+        .screen-main-heading span {
+            background: linear-gradient(135deg, var(--blue2), var(--purple2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .screen-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 10px;
+            background: var(--blue);
+            color: #fff;
+            border-radius: 4px;
+            font-size: 0.55rem;
+            font-weight: 600;
+            width: max-content;
+            margin-top: 10px;
+        }
+
+        .laptop-base {
+            background: #4a5568;
+            height: 10px;
+            border-radius: 0 0 10px 10px;
+            position: relative;
+            width: 104%;
+            left: -2%;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            transform-style: preserve-3d;
+        }
+
+        .laptop-base::after {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 4px;
+            background: #1a202c;
+            border-radius: 0 0 4px 4px;
+            left: 40%;
+            top: 0;
+        }
+
+        /* Floating Widgets styles */
+        .float-card {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+            border-radius: 14px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            z-index: 10;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        /* Specific position for each widget matching screenshot */
+        .float-card.perf {
+            top: 52%;
+            left: -10%;
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        .float-card.rev {
+            bottom: 8%;
+            right: -8%;
+            animation: floatSlow 6s ease-in-out infinite 2s;
+            padding-right: 20px;
+        }
+
+        .float-icon-code {
+            position: absolute;
+            top: -2%;
+            right: 18%;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+            z-index: 10;
+            animation: floatSlow 5s ease-in-out infinite 1s;
+        }
+
+        .float-icon-code svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.25;
+        }
+
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* circular progress SVG widget details */
+        .circle-progress {
+            position: relative;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        .circle-progress svg {
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        .circle-bg {
+            fill: none;
+            stroke: rgba(15, 23, 42, 0.05);
+            stroke-width: 4.5;
+        }
+
+        .circle-bar {
+            fill: none;
+            stroke: #10B981;
+            stroke-width: 4.5;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 2; /* 98% */
+            stroke-linecap: round;
+            filter: drop-shadow(0 0 2px rgba(16, 185, 129, 0.2));
+        }
+
+        .circle-val {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .float-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .float-label {
+            font-size: 0.65rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        .float-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-top: 1px;
+        }
+
+        .rev-chart {
+            display: flex;
+            align-items: flex-end;
+            gap: 3px;
+            height: 24px;
+            margin-left: 8px;
+        }
+
+        .chart-bar {
+            width: 4px;
+            background: rgba(37, 99, 235, 0.12);
+            border-radius: 1px;
+        }
+
+        .chart-bar.h1 { height: 10px; }
+        .chart-bar.h2 { height: 16px; }
+        .chart-bar.h3 { height: 12px; }
+        .chart-bar.h4 { height: 22px; }
+
+        .chart-bar.active {
+            background: linear-gradient(to top, var(--blue2), var(--purple2));
+        }
+
+        /* ── PHILOSOPHY SECTION ── */
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .phil-card {
+            background: var(--glass);
+            border: 1px solid var(--gb);
+            border-radius: 16px;
+            padding: 32px 24px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.4s,
+                        box-shadow 0.4s;
+        }
+
+        .phil-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.06);
+        }
+
+        .phil-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(37, 99, 235, 0.06);
+            border: 1px solid rgba(37, 99, 235, 0.14);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            margin-bottom: 22px;
+        }
+
+        .phil-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .phil-title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .phil-desc {
+            font-size: 0.84rem;
+            color: var(--text);
+            line-height: 1.62;
+        }
+
+        /* ── PROCESS TIMELINE SECTION ── */
+        .process-container {
+            margin-top: 64px;
+            position: relative;
+        }
+
+        .process-line {
+            position: absolute;
+            top: 26px;
+            left: 60px;
+            right: 60px;
+            height: 2px;
+            background: var(--gb);
+            z-index: 1;
+        }
+
+        .process-timeline-flex {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .process-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 14%;
+            text-align: center;
+        }
+
+        .step-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: var(--bg);
+            border: 2px solid var(--gb);
+            color: var(--muted);
+            font-family: "Orbitron", sans-serif;
+            font-weight: 700;
+            font-size: 0.88rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .step-circle::after {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            transition: all 0.4s;
+        }
+
+        .process-step:hover .step-circle {
+            border-color: var(--blue2);
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            color: #fff;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+        }
+
+        .process-step:hover .step-circle::after {
+            border-color: rgba(37, 99, 235, 0.35);
+        }
+
+        .step-title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            color: var(--white);
+        }
+
+        .step-desc {
+            font-size: 0.76rem;
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        /* ── WHAT MAKES US DIFFERENT ── */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .benefit-card {
+            background: var(--glass);
+            border: 1px solid var(--gb);
+            border-radius: 16px;
+            padding: 32px;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.4s,
+                        box-shadow 0.4s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.06);
+        }
+
+        .benefit-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            background: rgba(37, 99, 235, 0.06);
+            border: 1px solid rgba(37, 99, 235, 0.14);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            margin-bottom: 22px;
+        }
+
+        .benefit-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2;
+        }
+
+        .benefit-title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+
+        .benefit-desc {
+            font-size: 0.84rem;
+            color: var(--text);
+            line-height: 1.62;
+        }
+
+        /* ── TECHNOLOGY STACK ── */
+        .techstack-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+        }
+
+        .tech-column {
+            background: var(--glass);
+            border: 1px solid var(--gb);
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .column-title {
+            font-family: "Orbitron", sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 22px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .tech-item-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: rgba(15, 23, 42, 0.01);
+            border: 1px solid rgba(15, 23, 42, 0.03);
+            transition: all 0.3s;
+        }
+
+        .tech-item-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .tech-item-row:hover {
+            border-color: rgba(37, 99, 235, 0.15);
+            background: rgba(37, 99, 235, 0.02);
+        }
+
+        .tech-logo-wrapper {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid var(--gb);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .tech-logo-wrapper svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .tech-name-label {
+            font-size: 0.85rem;
+            font-weight: 550;
+            color: var(--white);
+        }
+
+        /* ── WHAT WE DELIVER ── */
+        .deliver-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 56px;
+        }
+
+        .deliver-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: var(--glass);
+            border: 1px solid var(--gb);
+            border-radius: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .deliver-item:hover {
+            border-color: rgba(124, 58, 237, 0.2);
+        }
+
+        .deliver-check {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(124, 58, 237, 0.08);
+            border: 1px solid rgba(124, 58, 237, 0.18);
+            color: var(--purple);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .deliver-check svg {
+            width: 11px;
+            height: 11px;
+            stroke-width: 3.5;
+        }
+
+        .deliver-content {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .deliver-title {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .deliver-desc {
+            font-size: 0.84rem;
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* ── BEFORE & AFTER COMPARISON ── */
+        .comparison-container {
+            margin-top: 56px;
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .comparison-col {
+            background: var(--glass);
+            border: 1px solid var(--gb);
+            border-radius: 20px;
+            padding: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .comparison-col:hover {
+            box-shadow: 0 16px 36px rgba(15, 23, 42, 0.03);
+            border-color: var(--gb);
+        }
+
+        .comp-badge {
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            width: max-content;
+        }
+
+        .comp-badge.before {
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.15);
+            color: #ef4444;
+        }
+
+        .comp-badge.after {
+            background: rgba(16, 185, 129, 0.08);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            color: #10b981;
+        }
+
+        .comp-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .comp-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            font-weight: 550;
+            color: var(--white);
+        }
+
+        .comp-item svg {
+            width: 16px;
+            height: 16px;
+            flex-shrink: 0;
+        }
+
+        .comp-item.cross svg {
+            color: #ef4444;
+            stroke-width: 2.5;
+        }
+
+        .comp-item.check svg {
+            color: #10b981;
+            stroke-width: 3;
+        }
+
+        .comp-item.cross span {
+            color: var(--muted);
+        }
+
+        /* Mockup Web Screens inside Columns */
+        .stylized-mockup {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.02);
+            border: 1px solid var(--gb);
+            border-radius: 14px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .stylized-mockup.legacy {
+            filter: grayscale(1);
+            opacity: 0.55;
+        }
+
+        .mockup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+            padding-bottom: 8px;
+        }
+
+        .mockup-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--muted);
+        }
+
+        .mockup-nav {
+            display: flex;
+            gap: 6px;
+        }
+
+        .mockup-nav-line {
+            width: 20px;
+            height: 3px;
+            background: var(--gb);
+            border-radius: 2px;
+        }
+
+        .mockup-hero {
+            height: 90px;
+            background: var(--gb);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 16px;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mockup-hero.modern {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.08));
+            border: 1px solid rgba(37, 99, 235, 0.12);
+        }
+
+        .mockup-line-lg {
+            width: 65%;
+            height: 8px;
+            background: var(--muted);
+            border-radius: 4px;
+        }
+
+        .mockup-line-md {
+            width: 45%;
+            height: 6px;
+            background: var(--gb);
+            border-radius: 3px;
+        }
+
+        .mockup-chart {
+            display: flex;
+            gap: 4px;
+            align-items: flex-end;
+            height: 30px;
+            position: absolute;
+            bottom: 12px;
+            right: 16px;
+        }
+
+        .mockup-bar {
+            width: 6px;
+            border-radius: 1px;
+            background: linear-gradient(to top, var(--blue2), var(--purple2));
+        }
+
+        .comp-arrow-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--purple));
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+            margin: 0 auto;
+            z-index: 2;
+        }
+
+        .comp-arrow-circle svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.5;
+        }
+
+        /* ── STRIP STATS SECTION ── */
+        .stats-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+            border-top: 1px solid var(--gb);
+            padding-top: 40px;
+        }
+
+        .stat-strip-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-strip-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(37, 99, 235, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--blue2);
+            font-size: 1.1rem;
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .stat-strip-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 2;
+        }
+
+        .stat-strip-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-strip-num {
+            font-family: "Orbitron", sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.1;
+        }
+
+        .stat-strip-label {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-top: 2px;
+        }
+
+        /* Responsive Breakpoints matching existing stylesheets */
+        @media (max-width: 1024px) {
+            .webdev-hero-grid {
+                grid-template-columns: 1fr;
+                gap: 56px;
+                text-align: center;
+            }
+
+            .webdev-hero .hero-desc,
+            .hero-capsule {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-checklist {
+                align-items: center;
+            }
+
+            .laptop-mockup-wrapper {
+                max-width: 580px;
+                margin: 0 auto;
+            }
+
+            .philosophy-grid,
+            .benefits-grid,
+            .techstack-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-line {
+                display: none;
+            }
+
+            .process-timeline-flex {
+                flex-direction: column;
+                gap: 32px;
+                align-items: center;
+            }
+
+            .process-step {
+                width: 60%;
+            }
+
+            .comparison-container {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .comp-arrow-circle {
+                transform: rotate(90deg);
+            }
+
+            .stats-strip {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .philosophy-grid,
+            .benefits-grid,
+            .techstack-grid,
+            .stats-strip,
+            .deliver-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-step {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Glow cursor and layout bg -->
+    <div class="grid-bg"></div>
+
+    <!-- GLOBAL NAVIGATION -->
+    <nav id="nav" role="navigation">
+        <div class="nav-logo" style="display: flex; align-items: center;">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="assets/logos/intro-logo.png" alt="AwebAI Icon" loading="eager" style="height: 32px; width: auto; display: block; margin-right: -8px;">
+                <span style="font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 900; color: #ffffff; letter-spacing: -0.03em; line-height: 1; display: inline-block;">webAI</span>
+            </a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li class="has-dropdown">
+                <a href="services.html" class="dropdown-trigger">What We Do <svg class="chevron-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:10px; height:10px; display:inline-block; margin-left:4px; transition: transform 0.3s;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-links">
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="ai-agents-automation.html">AI Agents & Automation</a></li>
+                        <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="analytics-automation.html">Analytics & Business Automation</a></li>
+                        <li><a href="saas-product-development.html">SaaS Product Development</a></li>
+                        <li><a href="cloud-api-integration.html">Cloud & API Integration Services</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="nav-burger" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- MAIN CONTENTS -->
+    <div class="page">
+        <!-- ══ HERO SECTION ══ -->
+        <section class="webdev-hero" aria-label="Web Development Hero Section">
+            <div class="wrap">
+                <div class="webdev-hero-grid">
+                    <!-- Left: Content details -->
+                    <div class="sa up">
+                        <div class="hero-capsule">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            Web Development
+                        </div>
+                        <h1>We Build Modern Websites That Drive <span class="grad">Real Growth</span></h1>
+                        <p class="hero-desc">At AwebAI, web development is not just about coding. It's about creating fast, secure, scalable, and conversion-focused websites that help businesses achieve their goals.</p>
+                        
+                        <div class="hero-checklist">
+                            <div class="checklist-item">
+                                <div class="checklist-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </div>
+                                <div class="checklist-text">
+                                    Modern Design
+                                    <span>Beautiful & user friendly layouts.</span>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checklist-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </div>
+                                <div class="checklist-text">
+                                    High-Performance
+                                    <span>Lightning fast websites built for speed.</span>
+                                </div>
+                            </div>
+                            <div class="checklist-item">
+                                <div class="checklist-check">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </div>
+                                <div class="checklist-text">
+                                    Business Focused
+                                    <span>Built to drive real leads and conversions.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: CSS Tilted Laptop Mockup with floating elements -->
+                    <div class="laptop-mockup-wrapper sa scale sa-d1">
+                        <div class="laptop-mockup">
+                            <div class="laptop-screen">
+                                <div class="laptop-screen-content">
+                                    <div class="screen-nav">
+                                        <div class="screen-logo">web<span>AI</span></div>
+                                        <div class="screen-menu">
+                                            <div class="screen-menu-dot"></div>
+                                            <div class="screen-menu-dot"></div>
+                                            <div class="screen-menu-dot"></div>
+                                        </div>
+                                    </div>
+                                    <div class="screen-body">
+                                        <div class="screen-tag">Next-Gen Experiences</div>
+                                        <div class="screen-main-heading">We create digital experiences that <span>drive growth</span></div>
+                                        <a href="#" class="screen-cta">Learn More →</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="laptop-base"></div>
+                        </div>
+
+                        <!-- Floating Widgets -->
+                        <div class="float-card perf">
+                            <div class="circle-progress">
+                                <svg>
+                                    <circle class="circle-bg" cx="22" cy="22" r="18"></circle>
+                                    <circle class="circle-bar" cx="22" cy="22" r="18"></circle>
+                                </svg>
+                                <div class="circle-val">98</div>
+                            </div>
+                            <div class="float-info">
+                                <div class="float-label">Speed Score</div>
+                                <div class="float-title">Performance</div>
+                            </div>
+                        </div>
+
+                        <div class="float-card rev">
+                            <div class="float-info">
+                                <div class="float-label">Revenue Growth</div>
+                                <div class="float-title" style="color: #10B981; font-weight: 700;">+120%</div>
+                            </div>
+                            <div class="rev-chart">
+                                <div class="chart-bar h1"></div>
+                                <div class="chart-bar h2"></div>
+                                <div class="chart-bar h3"></div>
+                                <div class="chart-bar h4 active"></div>
+                            </div>
+                        </div>
+
+                        <div class="float-icon-code">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PHILOSOPHY SECTION ══ -->
+        <section class="sec" style="background:var(--bg2);" aria-label="Our Philosophy Section">
+            <div class="wrap">
+                <div class="sec-label sa up">Our Philosophy</div>
+                <h2 class="sec-title sa up sa-d1">Every Website Starts With <span class="grad">Understanding Your Business</span></h2>
+                <p class="sec-sub sa up sa-d2">We follow a human-first, business-focused approach to build websites that are not only beautiful but also deliver measurable results.</p>
+                
+                <div class="philosophy-grid">
+                    <div class="phil-card sa up sa-d1">
+                        <div class="phil-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        </div>
+                        <div class="phil-title">Research</div>
+                        <p class="phil-desc">We analyze your industry, audience segment, and main competitors to extract design and UX opportunities.</p>
+                    </div>
+
+                    <div class="phil-card sa up sa-d2">
+                        <div class="phil-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <div class="phil-title">Strategy</div>
+                        <p class="phil-desc">We create a clear structure, map custom feature integrations, and formulate a funnel roadmap aligned with your targets.</p>
+                    </div>
+
+                    <div class="phil-card sa up sa-d3">
+                        <div class="phil-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="phil-title">User Experience</div>
+                        <p class="phil-desc">We design intuitive layouts that engage your visitors and lead them logically toward a clear call-to-action.</p>
+                    </div>
+
+                    <div class="phil-card sa up sa-d4">
+                        <div class="phil-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <div class="phil-title">Results</div>
+                        <p class="phil-desc">We build conversion-focused funnels designed to scale user interaction and convert visitors into customers.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PROCESS SECTION ══ -->
+        <section class="sec" style="background:var(--bg);" aria-label="Our Process Section">
+            <div class="wrap">
+                <div class="sec-label sa up">Our Process</div>
+                <h2 class="sec-title sa up sa-d1">How We <span class="grad">Build Your Website</span></h2>
+                <p class="sec-sub sa up sa-d2">A systematic, step-by-step engineering pipeline ensuring absolute speed, transparency, and top-tier code quality.</p>
+                
+                <div class="process-container">
+                    <div class="process-line"></div>
+                    <div class="process-timeline-flex">
+                        <div class="process-step sa up sa-d1">
+                            <div class="step-circle">01</div>
+                            <div class="step-title">Discovery</div>
+                            <p class="step-desc">Deep discovery of your goals, users, and needs.</p>
+                        </div>
+                        <div class="process-step sa up sa-d2">
+                            <div class="step-circle">02</div>
+                            <div class="step-title">UI/UX Design</div>
+                            <p class="step-desc">Stunning interface layout wireframes and user journeys.</p>
+                        </div>
+                        <div class="process-step sa up sa-d3">
+                            <div class="step-circle">03</div>
+                            <div class="step-title">Frontend</div>
+                            <p class="step-desc">Developing fast, responsive, SEO-ready code screens.</p>
+                        </div>
+                        <div class="process-step sa up sa-d4">
+                            <div class="step-circle">04</div>
+                            <div class="step-title">Backend</div>
+                            <p class="step-desc">Constructing secure database endpoints and integrations.</p>
+                        </div>
+                        <div class="process-step sa up sa-d5">
+                            <div class="step-circle">05</div>
+                            <div class="step-title">Optimization</div>
+                            <p class="step-desc">Rigorous speed audit, cross-browser and SEO checks.</p>
+                        </div>
+                        <div class="process-step sa up sa-d6">
+                            <div class="step-circle">06</div>
+                            <div class="step-title">Launch</div>
+                            <p class="step-desc">Deploying to cloud server and setting up monitoring.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ BENEFITS SECTION ══ -->
+        <section class="sec" style="background:var(--bg2);" aria-label="What Makes Us Different Section">
+            <div class="wrap">
+                <div class="sec-label sa up">What Makes Us Different</div>
+                <h2 class="sec-title sa up sa-d1">Websites That Are <span class="grad">Built To Perform</span></h2>
+                <p class="sec-sub sa up sa-d2">We focus heavily on speed, performance, security, and scalability to help you build an elite digital authority.</p>
+                
+                <div class="benefits-grid">
+                    <div class="benefit-card sa up sa-d1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <div class="benefit-title">Lightning Fast</div>
+                        <p class="benefit-desc">Optimized asset delivery, server-side caching, and smart scripts yielding 98+ PageSpeed core metrics.</p>
+                    </div>
+
+                    <div class="benefit-card sa up sa-d2">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        </div>
+                        <div class="benefit-title">Mobile First</div>
+                        <p class="benefit-desc">Completely responsive grids that load seamlessly on phones, tablets, and desktop resolutions.</p>
+                    </div>
+
+                    <div class="benefit-card sa up sa-d3">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+                        </div>
+                        <div class="benefit-title">SEO Ready</div>
+                        <p class="benefit-desc">Proper semantic heading structure, sitemap indices, structured metadata schemas and image tags.</p>
+                    </div>
+
+                    <div class="benefit-card sa up sa-d1">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        </div>
+                        <div class="benefit-title">Secure</div>
+                        <p class="benefit-desc">SSL setup, parameterized query endpoints, CSRF protection layers, and modern security head tags.</p>
+                    </div>
+
+                    <div class="benefit-card sa up sa-d2">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <div class="benefit-title">AI Ready</div>
+                        <p class="benefit-desc">Seamless API integration hooks for OpenAI models, Claude endpoints, smart chatbots, and AI vectors.</p>
+                    </div>
+
+                    <div class="benefit-card sa up sa-d3">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        </div>
+                        <div class="benefit-title">Scalable</div>
+                        <p class="benefit-desc">Modular backend systems and decoupled frontend design allowing easy future feature expansion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ TECHNOLOGY STACK SECTION ══ -->
+        <section class="sec" style="background:var(--bg);" aria-label="Technology Stack Section">
+            <div class="wrap">
+                <div class="sec-label sa up">Technology Stack</div>
+                <h2 class="sec-title sa up sa-d1">Modern Technologies For <span class="grad">Modern Businesses</span></h2>
+                <p class="sec-sub sa up sa-d2">We select robust, next-generation frameworks to engineer websites that stand the test of time.</p>
+                
+                <div class="techstack-grid">
+                    <!-- Column 1: Frontend -->
+                    <div class="tech-column sa up sa-d1">
+                        <div class="column-title">Frontend</div>
+                        
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" stroke="#61DAFB" stroke-width="6"/><ellipse cx="50" cy="50" rx="38" ry="14" stroke="#61DAFB" stroke-width="4" transform="rotate(30 50 50)"/><ellipse cx="50" cy="50" rx="38" ry="14" stroke="#61DAFB" stroke-width="4" transform="rotate(90 50 50)"/><ellipse cx="50" cy="50" rx="38" ry="14" stroke="#61DAFB" stroke-width="4" transform="rotate(150 50 50)"/><circle cx="50" cy="50" r="8" fill="#61DAFB"/></svg>
+                            </div>
+                            <div class="tech-name-label">React</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><path d="M50 5 L90 28 L90 72 L50 95 L10 72 L10 28 Z" stroke="#000" stroke-width="6" fill="#000"/><path d="M50 20 L80 38 L80 72 M50 20 L20 38 L20 72" stroke="#fff" stroke-width="6"/><path d="M50 90 L50 48" stroke="#fff" stroke-width="6"/></svg>
+                            </div>
+                            <div class="tech-name-label">Next.js</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="15" fill="#3178C6"/><text x="18" y="70" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="52">TS</text></svg>
+                            </div>
+                            <div class="tech-name-label">TypeScript</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><path d="M20 50 C20 40, 35 35, 45 45 C55 55, 70 50, 70 40 C70 30, 55 25, 45 35 C35 45, 20 40, 20 30" stroke="#38BDF8" stroke-width="8" stroke-linecap="round"/></svg>
+                            </div>
+                            <div class="tech-name-label">Tailwind CSS</div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: Backend -->
+                    <div class="tech-column sa up sa-d2">
+                        <div class="column-title">Backend</div>
+                        
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="45" fill="#339933"/><path d="M30 45 Q50 30 70 45 Q65 65 50 60 Q35 65 30 45 Z" fill="#fff"/></svg>
+                            </div>
+                            <div class="tech-name-label">Node.js</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><text x="12" y="65" fill="#000" font-family="sans-serif" font-weight="900" font-size="44">EX</text></svg>
+                            </div>
+                            <div class="tech-name-label">Express.js</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><path d="M50 5 C25 5, 20 20, 20 35 C20 60, 40 65, 50 85 C60 65, 80 60, 80 35 C80 20, 75 5, 50 5 Z" fill="#3776AB"/><path d="M50 95 C75 95, 80 80, 80 65 C80 40, 60 35, 50 15 C40 35, 20 40, 20 65 C20 80, 25 95, 50 95 Z" fill="#FFE873"/></svg>
+                            </div>
+                            <div class="tech-name-label">Python</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><path d="M15 15 L85 15 L85 85 Z" fill="#FFCA28"/><path d="M15 15 L85 85 L15 85 Z" fill="#F57C00"/></svg>
+                            </div>
+                            <div class="tech-name-label">Firebase</div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: Database -->
+                    <div class="tech-column sa up sa-d3">
+                        <div class="column-title">Database</div>
+                        
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><path d="M50 10 C30 25, 25 50, 50 90 C75 50, 70 25, 50 10 Z" fill="#47A248"/><path d="M50 10 C42 25, 40 50, 50 90" fill="#fff" opacity="0.3"/></svg>
+                            </div>
+                            <div class="tech-name-label">MongoDB</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="15" fill="#336791"/><text x="15" y="70" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="52">PS</text></svg>
+                            </div>
+                            <div class="tech-name-label">PostgreSQL</div>
+                        </div>
+                    </div>
+
+                    <!-- Column 4: Analytics & Business Automations -->
+                    <div class="tech-column sa up sa-d4">
+                        <div class="column-title">Analytics & Business Automations</div>
+                        
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="15" fill="#FF9900"/><text x="15" y="70" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="44">AWS</text></svg>
+                            </div>
+                            <div class="tech-name-label">AWS</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="15" fill="#2496ED"/><path d="M20 50 H80 M35 30 V70 M65 30 V70" stroke="#fff" stroke-width="10"/></svg>
+                            </div>
+                            <div class="tech-name-label">Docker</div>
+                        </div>
+                        <div class="tech-item-row">
+                            <div class="tech-logo-wrapper">
+                                <svg viewBox="0 0 100 100" fill="none"><polygon points="50 10, 90 85, 10 85" fill="#000"/></svg>
+                            </div>
+                            <div class="tech-name-label">Vercel</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ WHAT WE DELIVER SECTION ══ -->
+        <section class="sec" style="background:var(--bg2);" aria-label="What We Deliver Section">
+            <div class="wrap">
+                <div class="sec-label sa up">What We Deliver</div>
+                <h2 class="sec-title sa up sa-d1">Everything You Need In A <span class="grad">Complete Website</span></h2>
+                <p class="sec-sub sa up sa-d2">Our builds are production-ready, fully equipped, and feature-rich out of the box.</p>
+                
+                <div class="deliver-grid">
+                    <div class="deliver-item sa up sa-d1">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Custom Design</div>
+                            <p class="deliver-desc">Tailor-made styling representing your brand value, custom vectors and typography.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d2">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Responsive Development</div>
+                            <p class="deliver-desc">Fluid bento grids and containers adapting beautifully to all layout dimensions.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d1">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">SEO Setup</div>
+                            <p class="deliver-desc">Sitemap configuration, canonical references, structured metadata, and schema indexing.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d2">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Performance Optimization</div>
+                            <p class="deliver-desc">Image compression, minified stylesheet scripts, lazy load rules and asset delivery.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d1">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Security Implementation</div>
+                            <p class="deliver-desc">SSL configurations, HTTP security tags, secure server queries and form safeguards.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d2">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Analytics Integration</div>
+                            <p class="deliver-desc">Google Analytics setup, custom page event click trackers and visitor dashboards.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d1">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">CMS Setup</div>
+                            <p class="deliver-desc">Simple interface backend panel ensuring easy blogs, text, and asset updates.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliver-item sa up sa-d2">
+                        <div class="deliver-check">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                        </div>
+                        <div class="deliver-content">
+                            <div class="deliver-title">Training & Support</div>
+                            <p class="deliver-desc">Video tutorials detailing admin modifications and quick post-launch support assistance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ BEFORE & AFTER SECTION ══ -->
+        <section class="sec" style="background:var(--bg);" aria-label="Before and After transformation Section">
+            <div class="wrap">
+                <div class="sec-label sa up">Before & After</div>
+                <h2 class="sec-title sa up sa-d1">Real Transformation. <span class="grad">Real Results.</span></h2>
+                <p class="sec-sub sa up sa-d2">Witness the visual and performance upgrade of migrating legacy sites to AwebAI modern stack.</p>
+                
+                <div class="comparison-container">
+                    <!-- Before Column -->
+                    <div class="comparison-col sa scale">
+                        <div class="comp-badge before">Before</div>
+                        <ul class="comp-list">
+                            <li class="comp-item cross">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                <span>Slow loading websites</span>
+                            </li>
+                            <li class="comp-item cross">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                <span>Poor user experience</span>
+                            </li>
+                            <li class="comp-item cross">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                <span>Low search rankings</span>
+                            </li>
+                            <li class="comp-item cross">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                                <span>Low conversions</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="stylized-mockup legacy">
+                            <div class="mockup-header">
+                                <div class="mockup-dot"></div>
+                                <div class="mockup-nav">
+                                    <div class="mockup-nav-line"></div>
+                                    <div class="mockup-nav-line"></div>
+                                </div>
+                            </div>
+                            <div class="mockup-hero">
+                                <div class="mockup-line-lg"></div>
+                                <div class="mockup-line-md"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Separator arrow circle -->
+                    <div class="comp-arrow-circle sa scale sa-d1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </div>
+
+                    <!-- After Column -->
+                    <div class="comparison-col sa scale sa-d2" style="border-color: rgba(37, 99, 235, 0.25); background: rgba(37, 99, 235, 0.02);">
+                        <div class="comp-badge after">After</div>
+                        <ul class="comp-list">
+                            <li class="comp-item check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Fast & optimized websites</span>
+                            </li>
+                            <li class="comp-item check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Modern & engaging design</span>
+                            </li>
+                            <li class="comp-item check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>Higher search rankings</span>
+                            </li>
+                            <li class="comp-item check">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span>More leads & conversions</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="stylized-mockup" style="border-color: rgba(37, 99, 235, 0.2); background: rgba(0, 0, 0, 0.15);">
+                            <div class="mockup-header">
+                                <div class="mockup-dot" style="background: var(--blue2);"></div>
+                                <div class="mockup-nav">
+                                    <div class="mockup-nav-line" style="background: var(--blue2);"></div>
+                                    <div class="mockup-nav-line" style="background: var(--purple2);"></div>
+                                </div>
+                            </div>
+                            <div class="mockup-hero modern">
+                                <div class="mockup-line-lg" style="background: #fff;"></div>
+                                <div class="mockup-line-md" style="background: var(--blue2);"></div>
+                                <div class="mockup-chart">
+                                    <div class="mockup-bar" style="height: 12px;"></div>
+                                    <div class="mockup-bar" style="height: 18px;"></div>
+                                    <div class="mockup-bar" style="height: 25px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Numerical metrics row -->
+                <div class="stats-strip">
+                    <div class="stat-strip-card sa up sa-d1">
+                        <div class="stat-strip-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="stat-strip-info">
+                            <div class="stat-strip-num" data-target="50" data-suffix="+">0+</div>
+                            <div class="stat-strip-label">Projects Delivered</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-strip-card sa up sa-d2">
+                        <div class="stat-strip-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                        </div>
+                        <div class="stat-strip-info">
+                            <div class="stat-strip-num" data-target="98" data-suffix="%">0%</div>
+                            <div class="stat-strip-label">Client Satisfaction</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-strip-card sa up sa-d3">
+                        <div class="stat-strip-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <div class="stat-strip-info">
+                            <div class="stat-strip-num" data-target="2" data-suffix="x">0x</div>
+                            <div class="stat-strip-label">Faster Performance</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-strip-card sa up sa-d4">
+                        <div class="stat-strip-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/></svg>
+                        </div>
+                        <div class="stat-strip-info">
+                            <div class="stat-strip-num" data-target="100" data-suffix="%">0%</div>
+                            <div class="stat-strip-label">Custom Solutions</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ CTA SECTION ══ -->
+        <section class="sec" style="background:var(--bg2);" aria-label="CTA block Section">
+            <div class="wrap sa scale">
+                <div class="cta-banner" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(37, 99, 235, 0.08));">
+                    <div class="sec-label" style="justify-content:center;">Book A Call</div>
+                    <h2 class="sec-title" style="margin-bottom:14px;">Ready To Build Something <span class="grad">Exceptional?</span></h2>
+                    <p style="color:var(--text);max-width:480px;margin:0 auto 36px;line-height:1.75;font-size:.96rem;">Let's create a website that helps your business grow, stand out and succeed online.</p>
+                    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+                        <a href="contact.html" class="btn-p" style="background: linear-gradient(135deg, var(--purple), var(--blue)); box-shadow: 0 0 24px rgba(124, 58, 237, 0.25);">Book A Discovery Call →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-in">
+            <div>
+                <div class="flogo"><img src="assets/logos/logo.png" alt="AwebAI Footer Logo" loading="lazy"></div>
+                <p class="fdesc">Modern web development & AI solutions for startups, businesses and creators. Building the future, one product at a time.</p>
+                <div class="fsoc">
+                    <a href="#" aria-label="Follow us on X">𝕏</a>
+                    <a href="#" aria-label="Follow us on LinkedIn">in</a>
+                    <a href="#" aria-label="Follow us on YouTube">▶</a>
+                    <a href="#" aria-label="Follow us on Instagram">📸</a>
+                    <a href="#" aria-label="Follow us on GitHub">🐙</a>
+                </div>
+            </div>
+            <div>
+                <div class="fcol-title">Pages</div>
+                <ul class="flinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="has-dropdown">
+                <a href="services.html" class="dropdown-trigger">What We Do <svg class="chevron-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:10px; height:10px; display:inline-block; margin-left:4px; transition: transform 0.3s;"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-links">
+                        <li><a href="web-development.html">Web Development</a></li>
+                        <li><a href="ai-agents-automation.html">AI Agents & Automation</a></li>
+                        <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+                        <li><a href="analytics-automation.html">Analytics & Business Automation</a></li>
+                        <li><a href="saas-product-development.html">SaaS Product Development</a></li>
+                        <li><a href="cloud-api-integration.html">Cloud & API Integration Services</a></li>
+                    </ul>
+                </div>
+            </li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="fcol-title">Services</div>
+                <ul class="flinks">
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ai-agents-automation.html">AI Agent & Automations System</a></li>
+                    <li><a href="ui-ux-design.html">UI/UX Design</a></li>
+                    <li><a href="analytics-automation.html">Analytics & Business Automations</a></li>
+                    <li><a href="saas-product-development.html">SaaS Product Development</a></li>
+                        <li><a href="cloud-api-integration.html">Cloud & API Integration Services</a></li>
+                    </ul>
+            </div>
+            <div>
+                <div class="fcol-title">Contact</div>
+                <ul class="flinks">
+                    <li><a href="mailto:awebai07@gmail.com">awebai07@gmail.com</a></li>
+                    <li><a href="tel:+919123135001">+91 91231 35001</a></li>
+                    <li><a href="https://wa.me/919123135001" target="_blank">WhatsApp</a></li>
+                    <li><a href="#">India · Remote Worldwide</a></li>
+                </ul>
+                <a href="https://wa.me/919123135001" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;text-decoration:none;border-radius:8px;font-size:.82rem;font-weight:600;margin-top:18px;">💬 WhatsApp Us</a>
+            </div>
+        </div>
+        <div class="footer-bot">
+            <div class="fcopy">© 2026 AwebAI.tech · All rights reserved.</div>
+            <div class="flegal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+        </div>
+    </footer>
+
+    <!-- GLOBAL CHATBOT DIALOG -->
+    <div id="chatbot" role="dialog" aria-label="AI Assistant Chatbot">
+        <div class="cb-head">
+            <div class="cb-av">🤖</div>
+            <div>
+                <div class="cb-name">AwebAI Assistant</div>
+                <div class="cb-status">Online · Replies instantly</div>
+            </div>
+            <button class="cb-x" onclick="toggleChat()" aria-label="Close Chatbot">✕</button>
+        </div>
+        <div class="cb-msgs" id="cbMsgs">
+            <div class="msg bot">👋 Hi! I'm AwebAI's assistant. How can I help you today?</div>
+            <div class="msg bot">Ask me about our services, pricing or how to get started! 🚀</div>
+        </div>
+        <div class="cb-quick">
+            <button class="qb" onclick="qr('💰 Pricing')">💰 Pricing</button>
+            <button class="qb" onclick="qr('🌐 Web Dev')">🌐 Web Dev</button>
+            <button class="qb" onclick="qr('🤖 AI Tools')">🤖 AI Tools</button>
+            <button class="qb" onclick="qr('📞 Contact')">📞 Contact</button>
+        </div>
+        <div class="cb-inp-wrap">
+            <input class="cb-inp" id="cbInp" placeholder="Type a message..." aria-label="Chat input field" onkeydown="if(event.key==='Enter')sendChat()">
+            <button class="cb-send" onclick="sendChat()" aria-label="Send Message">➤</button>
+        </div>
+    </div>
+    <button id="fab" onclick="toggleChat()" aria-label="Open Chatbot Window">
+        <div class="fab-ring"></div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" style="width:22px;height:22px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+    </button>
+
+    <!-- Global Modular Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/navigation.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/chatbot.js" defer></script>
+</body>
+
+</html>
+
+

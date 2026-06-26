@@ -1,0 +1,155 @@
+/* ── KEYFRAMES ── */
+@keyframes float1 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes pdot {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 8px #22C55E;
+    }
+    50% {
+        opacity: .4;
+        box-shadow: 0 0 16px #22C55E;
+    }
+}
+
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    70%, 100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(.92);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes typingBounce {
+    0%, 80%, 100% {
+        transform: scale(.6);
+        opacity: .4;
+    }
+    40% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.sa {
+    opacity: 0;
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.sa.up {
+    transform: translateY(44px);
+}
+
+.sa.left {
+    transform: translateX(-44px);
+}
+
+.sa.right {
+    transform: translateX(44px);
+}
+
+.sa.scale {
+    transform: scale(.9);
+}
+
+.sa.in {
+    opacity: 1;
+    transform: none;
+}
+
+.sa-d1 {
+    transition-delay: .1s;
+}
+
+.sa-d2 {
+    transition-delay: .2s;
+}
+
+.sa-d3 {
+    transition-delay: .3s;
+}
+
+.sa-d4 {
+    transition-delay: .4s;
+}
+
+.sa-d5 {
+    transition-delay: .5s;
+}
+
+.sa-d6 {
+    transition-delay: .6s;
+}
