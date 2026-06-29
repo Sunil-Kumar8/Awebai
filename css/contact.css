@@ -1,0 +1,534 @@
+/* ══ CONTACT PAGE STYLE SHEET ══ */
+
+/* Hero Layout */
+.contact-hero {
+    padding: 100px 0 80px;
+    background: var(--bg);
+}
+
+.contact-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 56px;
+    align-items: flex-start;
+    margin-top: 48px;
+}
+
+/* Left Column Styling */
+.contact-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.get-in-touch-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--purple);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.contact-hero-title {
+    font-family: "Outfit", sans-serif;
+    font-size: clamp(2rem, 3.8vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+}
+
+.contact-hero-desc {
+    font-size: 0.98rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Stacked Info Cards */
+.contact-info-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(37, 99, 235, 0.15);
+}
+
+.card-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-icon-box.email-icon {
+    background: rgba(37, 99, 235, 0.06);
+    color: var(--blue);
+}
+
+.card-icon-box.phone-icon {
+    background: rgba(16, 185, 129, 0.06);
+    color: #10b981;
+}
+
+.card-icon-box.location-icon {
+    background: rgba(124, 58, 237, 0.06);
+    color: var(--purple);
+}
+
+.card-icon-box svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2;
+}
+
+.card-content-area {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.card-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.card-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.card-value a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.card-value a:hover {
+    color: var(--purple);
+}
+
+.card-subtext {
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+/* WhatsApp Banner Style */
+.whatsapp-banner-card {
+    background: #128c7e;
+    color: #ffffff;
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(18, 140, 126, 0.15);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-banner-card:hover {
+    transform: translateY(-2px);
+    background: #0e7065;
+    box-shadow: 0 12px 30px rgba(18, 140, 126, 0.25);
+}
+
+.wa-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.wa-banner-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.wa-banner-icon svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+}
+
+.wa-banner-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.wa-banner-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.wa-banner-subtitle {
+    font-size: 0.78rem;
+    opacity: 0.9;
+}
+
+.wa-banner-arrow svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2.5;
+}
+
+/* Social Follow Card */
+.social-updates-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 16px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.01);
+}
+
+.social-updates-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.social-icons-flex {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.social-icon-box:hover {
+    transform: translateY(-2px);
+    background: rgba(124, 58, 237, 0.06);
+    border-color: rgba(124, 58, 237, 0.25);
+    color: var(--purple);
+}
+
+.social-icon-box svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+/* Right Column Form Card */
+.contact-form-card {
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+}
+
+.form-header-area {
+    margin-bottom: 28px;
+}
+
+.form-card-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 6px;
+}
+
+.form-card-subtitle {
+    font-size: 0.88rem;
+    color: #64748b;
+}
+
+.contact-form-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.field-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #334155;
+}
+
+.field-input, 
+.field-textarea {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+    color: #94a3b8;
+}
+
+.field-input:focus,
+.field-textarea:focus {
+    background: #ffffff;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3.5px rgba(124, 58, 237, 0.15);
+    outline: none;
+}
+
+.select-dropdown-container {
+    position: relative;
+    width: 100%;
+}
+
+.field-select {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 40px 12px 16px;
+    font-size: 0.95rem;
+    color: #0f172a;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.field-select:focus {
+    background: #ffffff;
+    border-color: var(--purple);
+    box-shadow: 0 0 0 3.5px rgba(124, 58, 237, 0.15);
+    outline: none;
+}
+
+.select-arrow-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748b;
+    pointer-events: none;
+}
+
+.select-arrow-icon svg {
+    width: 12px;
+    height: 12px;
+    stroke-width: 2.5;
+}
+
+.field-textarea {
+    height: 124px;
+    resize: vertical;
+}
+
+.form-submit-btn {
+    background: #7c3aed;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 0.98rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+    transition: all 0.25s ease;
+}
+
+.form-submit-btn:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+.form-submit-btn:active {
+    transform: translateY(0);
+}
+
+.form-submit-btn svg {
+    width: 16px;
+    height: 16px;
+    stroke-width: 2.5;
+}
+
+.form-footer-note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    color: #64748b;
+    margin-top: 16px;
+}
+
+.form-footer-note svg {
+    width: 13px;
+    height: 13px;
+    stroke-width: 2.5;
+}
+
+/* Bottom Features Banner */
+.features-banner-container {
+    margin-top: 64px;
+    background: #ffffff;
+    border: 1px solid rgba(15, 23, 42, 0.05);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.01);
+}
+
+.features-banner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.feature-column-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.feature-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-icon-circle.clock {
+    background: rgba(59, 130, 246, 0.08);
+    color: #3b82f6;
+}
+
+.feature-icon-circle.shield {
+    background: rgba(16, 185, 129, 0.08);
+    color: #10b981;
+}
+
+.feature-icon-circle.support {
+    background: rgba(124, 58, 237, 0.08);
+    color: #7c3aed;
+}
+
+.feature-icon-circle.delivery {
+    background: rgba(249, 115, 22, 0.08);
+    color: #f97316;
+}
+
+.feature-icon-circle svg {
+    width: 22px;
+    height: 22px;
+    stroke-width: 2.25;
+}
+
+.feature-text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.feature-col-title {
+    font-size: 0.92rem;
+    font-weight: 750;
+    color: #0f172a;
+}
+
+.feature-col-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.35;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .contact-layout-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .features-banner-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+@media (max-width: 640px) {
+    .contact-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .contact-form-card {
+        padding: 24px;
+    }
+    
+    .form-row-2col {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .features-banner-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .features-banner-container {
+        padding: 24px 20px;
+    }
+}

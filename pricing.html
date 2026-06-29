@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,6 +37,383 @@
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
+    <style>
+        /* Redesigned Pricing Page layout matching premium mockup */
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        .pricing-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 48px;
+            align-items: center;
+            padding: 80px 0 60px;
+        }
+        .hero-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .pricing-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--purple);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 16px;
+        }
+        .pricing-label::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: var(--purple);
+            border-radius: 50%;
+        }
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--white);
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        .hero-title .grad {
+            background: linear-gradient(135deg, var(--purple), var(--blue2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-desc {
+            font-size: 1.02rem;
+            color: var(--text);
+            line-height: 1.68;
+            margin-bottom: 32px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+        .btn-purple {
+            background: linear-gradient(135deg, var(--purple), var(--purple2));
+            color: #ffffff !important;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.2);
+            font-size: 0.95rem;
+        }
+        .btn-purple:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.3);
+        }
+        .btn-outline {
+            border: 1px solid var(--gb);
+            color: var(--white) !important;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            background: transparent;
+            font-size: 0.95rem;
+        }
+        .btn-outline:hover {
+            background: rgba(15, 23, 42, 0.04);
+            border-color: var(--white);
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border-top: 1px solid var(--gb);
+            padding-top: 32px;
+        }
+        .hero-stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stat-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+        .hero-stat-label {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-weight: 500;
+            line-height: 1.3;
+        }
+        .hero-right {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--gb);
+            min-height: 380px;
+            height: 100%;
+        }
+        .hero-image-wrapper {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+        }
+        .features-highlight {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            margin-top: -30px;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 80px;
+        }
+        .highlight-card {
+            background: #ffffff;
+            border: 1px solid var(--gb);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            transition: all 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+        .highlight-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        .highlight-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 8px;
+        }
+        .highlight-desc {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        .pricing-section {
+            padding: 80px 0;
+            background-color: var(--bg2);
+            border-top: 1px solid var(--gb);
+        }
+        .pricing-title-area {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 56px;
+        }
+        .pricing-cards-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .price-card {
+            background: #ffffff;
+            border: 1px solid var(--gb);
+            border-radius: 24px;
+            padding: 40px 32px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .price-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06);
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+        .price-card.featured {
+            border-color: var(--purple);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.08);
+        }
+        .badge-popular {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--purple), var(--purple2));
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .price-card-tier {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+        .price-card-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: baseline;
+        }
+        .price-card-period {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-weight: 500;
+            margin-left: 4px;
+        }
+        .price-card-desc {
+            font-size: 0.85rem;
+            color: var(--muted);
+            line-height: 1.5;
+            margin-bottom: 32px;
+            min-height: 48px;
+        }
+        .price-card-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .price-card-feat {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.88rem;
+            color: var(--text);
+        }
+        .price-card-check {
+            width: 18px;
+            height: 18px;
+            color: #10b981;
+            flex-shrink: 0;
+        }
+        .price-card-btn {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: auto;
+            font-size: 0.92rem;
+        }
+        .price-card-btn.primary {
+            background: linear-gradient(135deg, var(--purple), var(--purple2));
+            color: #ffffff !important;
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.15);
+        }
+        .price-card-btn.primary:hover {
+            box-shadow: 0 15px 25px rgba(124, 58, 237, 0.25);
+            transform: translateY(-1px);
+        }
+        .price-card-btn.secondary {
+            background: var(--bg3);
+            color: var(--white) !important;
+            border: 1px solid var(--gb);
+        }
+        .price-card-btn.secondary:hover {
+            background: #e2e8f0;
+            transform: translateY(-1px);
+        }
+        .roi-banner {
+            background: var(--white);
+            color: var(--bg);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .roi-left {
+            display: flex;
+            flex-direction: column;
+        }
+        .roi-percentage {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--blue2);
+            line-height: 1;
+            margin-bottom: 12px;
+            font-family: 'Orbitron', sans-serif;
+        }
+        .roi-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .roi-desc {
+            color: var(--muted);
+            filter: brightness(1.4);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+        .roi-right {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 32px;
+        }
+        @media (max-width: 991px) {
+            .pricing-hero {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                text-align: center;
+                padding-top: 100px;
+            }
+            .hero-actions {
+                justify-content: center;
+            }
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .features-highlight {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                margin-top: -10px;
+            }
+            .pricing-cards-container {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .roi-banner {
+                grid-template-columns: 1fr;
+                gap: 24px;
+                padding: 32px;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-stats {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .features-highlight {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -81,93 +458,197 @@
 
     <!-- MAIN CONTENTS -->
     <div class="page">
-        <!-- ══ PRICING BENTO ══ -->
-        <section class="sec" style="background:var(--bg);" aria-label="Our Pricing Plans">
+        <!-- ══ PRICING HERO SECTION ══ -->
+        <section class="sec" style="background:var(--bg); padding: 120px 0 60px;" aria-label="Pricing Hero">
             <div class="wrap">
-                <div class="sec-label sa up">Pricing</div>
-                <h1 class="sec-title sa up sa-d1">Explore Our <span class="grad">Pricing Dashboard</span></h1>
-                <p class="sec-sub sa up sa-d2">Transparent pricing packages layered in a functional asymmetrical bento layout for absolute budget clarity.</p>
-
-                <div class="pricing-bento-grid">
-                    <!-- Left Bento: Plans Grid -->
-                    <div class="pricing-plans-grid">
-                        <!-- Card 1: Starter -->
-                        <div class="pricing-bento-card sa scale">
-                            <div class="price-header">
-                                <div class="price-tier">Starter</div>
-                                <div class="price-value">$999 <span class="price-period">/ project</span></div>
-                            </div>
-                            <p class="price-desc" style="font-size:0.83rem;">Perfect for landing sites or simple startups.</p>
-                            <ul class="price-features" style="font-size:0.84rem; margin-bottom: 24px; gap: 12px;">
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 5-Page Next.js Web App</li>
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Responsive Mobile Layout</li>
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Core SEO Optimization</li>
-                            </ul>
-                            <a href="contact.html?plan=starter" class="price-btn btn-g" style="margin-top:auto;">Get Starter Plan</a>
+                <div class="pricing-hero">
+                    <div class="hero-left sa left">
+                        <div class="pricing-label">Pricing Plans</div>
+                        <h1 class="hero-title">Flexible Plans. <br><span class="grad">Built For Scale.</span></h1>
+                        <p class="hero-desc">We offer transparent, flat-rate development packages and customized enterprise budgets tailored to your project. No hidden charges, no vendor lock-ins.</p>
+                        <div class="hero-actions">
+                            <a href="#packages" class="btn-purple">Explore Packages</a>
+                            <a href="contact.html" class="btn-outline">Get Custom Quote</a>
                         </div>
-
-                        <!-- Card 2: Growth Pro -->
-                        <div class="pricing-bento-card sa scale sa-d1" style="border-color: rgba(0, 212, 255, 0.25); background: linear-gradient(180deg, rgba(7, 13, 28, 0.7) 0%, rgba(4, 6, 15, 0.85) 100%);">
-                            <div class="price-header">
-                                <div class="price-tier" style="color:var(--neon);">Growth Pro</div>
-                                <div class="price-value">$2,499 <span class="price-period">/ project</span></div>
+                        <div class="hero-stats">
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-num">$999+</span>
+                                <span class="hero-stat-label">Starter Plan</span>
                             </div>
-                            <p class="price-desc" style="font-size:0.83rem;">The ultimate stack for growing brands needing custom web dev + LLM integrations.</p>
-                            <ul class="price-features" style="font-size:0.84rem; margin-bottom: 24px; gap: 12px;">
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> 15-Page Next.js Platform</li>
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Smart LLM Chatbot Integration</li>
-                                <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lead Flow Database Sync</li>
-                            </ul>
-                            <a href="contact.html?plan=growth" class="price-btn btn-p" style="margin-top:auto; box-shadow: 0 0 20px rgba(37,99,235,0.25);">Get Growth Pro</a>
-                        </div>
-
-                        <!-- Card 3: Custom Double Width Enterprise -->
-                        <div class="pricing-bento-card double sa scale sa-d2">
-                            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
-                                <div>
-                                    <div class="price-tier">Custom Enterprise</div>
-                                    <div class="price-value">Custom Quote</div>
-                                    <p class="price-desc" style="max-width: 420px; margin-top: 10px;">Tailor-made solution for large corporations demanding dedicated fine-tuned models, CRM pipelines, and SLA uptime guarantees.</p>
-                                </div>
-                                <div style="flex-grow: 1; max-width: 320px;">
-                                    <ul class="price-features" style="font-size: 0.84rem; gap: 12px; margin-bottom: 0;">
-                                        <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Custom SLA Support</li>
-                                        <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Fine-Tuned AI Models</li>
-                                        <li class="price-feat"><svg class="price-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> ERP / CRM Systems Sync</li>
-                                    </ul>
-                                </div>
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-num">$2,499+</span>
+                                <span class="hero-stat-label">Growth Pro</span>
                             </div>
-                            <a href="contact.html?plan=enterprise" class="price-btn btn-g" style="margin-top: 24px; width: 100%;">Discuss Custom Enterprise</a>
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-num">Custom</span>
+                                <span class="hero-stat-label">Enterprise Tiers</span>
+                            </div>
+                            <div class="hero-stat-item">
+                                <span class="hero-stat-num">100%</span>
+                                <span class="hero-stat-label">ROI Guarantee</span>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Right Bento: Sidebar Trust Cards -->
-                    <div class="pricing-sidebar-grid">
-                        <!-- Card 4: Value Dials -->
-                        <div class="pricing-sidebar-card sa scale sa-d1" style="min-height: 230px;">
-                            <div>
-                                <div style="font-family: 'Orbitron', sans-serif; font-size: 1.8rem; font-weight: 800; color: var(--neon);">100%</div>
-                                <div style="font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text); margin-top: 4px; margin-bottom: 12px;">ROI Guarantee</div>
-                                <p style="font-size:0.83rem; color: var(--text); line-height: 1.6;">If our automation system doesn't save you at least 10 hours in the first month, we refund you fully.</p>
-                            </div>
-                        </div>
-
-                        <!-- Card 5: Quick Chat -->
-                        <div class="pricing-sidebar-card sa scale sa-d2" style="background: linear-gradient(135deg, rgba(37,211,102,0.1), rgba(18,140,126,0.05)); min-height: 230px;">
-                            <div>
-                                <div style="font-size: 1.8rem;">💬</div>
-                                <h3 style="font-family:'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: #fff; margin-top: 8px; margin-bottom: 8px;">Direct Developer Chat</h3>
-                                <p style="font-size:0.83rem; color: var(--text); line-height: 1.6; margin-bottom: 16px;">Skip forms completely. Chat with our founder immediately on WhatsApp for a custom quick-quote.</p>
-                            </div>
-                            <a href="https://wa.me/919123135001" target="_blank" class="wa-btn" style="margin-top:auto; font-size: 0.82rem; padding: 12px; justify-content: center; border-radius: 8px;">WhatsApp Us Now</a>
+                    <div class="hero-right sa right">
+                        <div class="hero-image-wrapper">
+                            <canvas id="pricing-canvas" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block; background: transparent;"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ══ TRUST PILLARS SECTION (4 cards) ══ -->
+        <section class="sec" style="background:var(--bg2); padding: 60px 0 80px;" aria-label="Core Trust Pillars">
+            <div class="wrap">
+                <div class="features-highlight">
+                    <div class="highlight-card sa scale">
+                        <div class="highlight-icon" style="background: rgba(124, 58, 237, 0.1); color: var(--purple);">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 2 18 2 18 6 6 6 6 2"/><rect x="3" y="6" width="18" height="16" rx="2"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+                        </div>
+                        <h3 class="highlight-title">Flat-Rate Dev</h3>
+                        <p class="highlight-desc">Predictable budgeting with structured pricing milestones for absolute clarity.</p>
+                    </div>
+                    <div class="highlight-card sa scale sa-d1">
+                        <div class="highlight-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3 class="highlight-title">Agile Delivery</h3>
+                        <p class="highlight-desc">Frequent updates, direct reviews, and zero communication barriers.</p>
+                    </div>
+                    <div class="highlight-card sa scale sa-d2">
+                        <div class="highlight-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3 class="highlight-title">100% ROI Guarantee</h3>
+                        <p class="highlight-desc">If our customized AI automation does not save your time, we refund completely.</p>
+                    </div>
+                    <div class="highlight-card sa scale sa-d3">
+                        <div class="highlight-icon" style="background: rgba(236, 72, 153, 0.1); color: #ec4899;">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                        </div>
+                        <h3 class="highlight-title">Enterprise SLA</h3>
+                        <p class="highlight-desc">Continuous scaling support, maintenance, and robust server monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ PRICING PACKAGES SECTION ══ -->
+        <section id="packages" class="pricing-section" aria-label="Pricing Packages Grid">
+            <div class="wrap">
+                <div class="pricing-title-area">
+                    <div class="pricing-label" style="justify-content:center; margin-bottom:12px;">Choose Your Plan</div>
+                    <h2 class="sec-title" style="text-align:center; font-size: 2.2rem; font-weight: 800; color: #0f172a; margin-bottom: 16px;">Redesigned Bento Pricing</h2>
+                    <p style="color: #64748b; font-size: 0.95rem; line-height: 1.6;">Simple tiers built to handle everything from single-page lead websites to high-scale digital platforms.</p>
+                </div>
+
+                <div class="pricing-cards-container">
+                    <!-- Starter Plan -->
+                    <div class="price-card sa scale">
+                        <div class="price-card-tier">Starter</div>
+                        <div class="price-card-amount">$999 <span class="price-card-period">/ project</span></div>
+                        <p class="price-card-desc">Perfect for landing sites or simple startups seeking a fast and clean digital presence.</p>
+                        <ul class="price-card-features">
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                5-Page Next.js Web App
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Responsive Mobile Layout
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Core SEO Optimization
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                1-Month Post-Launch Bug Fixes
+                            </li>
+                        </ul>
+                        <a href="contact.html?plan=starter" class="price-card-btn secondary">Get Starter Plan</a>
+                    </div>
+
+                    <!-- Growth Pro (Featured) -->
+                    <div class="price-card featured sa scale sa-d1">
+                        <span class="badge-popular">Most Popular</span>
+                        <div class="price-card-tier" style="color: var(--purple);">Growth Pro</div>
+                        <div class="price-card-amount">$2,499 <span class="price-card-period">/ project</span></div>
+                        <p class="price-card-desc">The ultimate stack for growing brands needing custom web dev and smart LLM/AI integrations.</p>
+                        <ul class="price-card-features">
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                15-Page Next.js Platform
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Smart LLM Chatbot Integration
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Lead Flow Database Sync
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Advanced SEO & Analytics Panel
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                3-Months Premium Maintenance
+                            </li>
+                        </ul>
+                        <a href="contact.html?plan=growth" class="price-card-btn primary">Get Growth Pro</a>
+                    </div>
+
+                    <!-- Custom Enterprise -->
+                    <div class="price-card sa scale sa-d2">
+                        <div class="price-card-tier">Custom Enterprise</div>
+                        <div class="price-card-amount">Custom Quote</div>
+                        <p class="price-card-desc">Tailor-made solution for corporations demanding custom finetuned AI models, CRM integration, and high SLAs.</p>
+                        <ul class="price-card-features">
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Custom Fine-Tuned AI Models
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Dedicated Server Deployment (AWS)
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Full ERP / CRM System Sync
+                            </li>
+                            <li class="price-card-feat">
+                                <svg class="price-card-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                Custom SLA Support & Maintenance
+                            </li>
+                        </ul>
+                        <a href="contact.html?plan=enterprise" class="price-card-btn secondary">Discuss Custom Enterprise</a>
+                    </div>
+                </div>
+
+                <!-- ROI & WhatsApp banner -->
+                <div class="roi-banner sa up">
+                    <div class="roi-left">
+                        <div class="roi-percentage">100%</div>
+                        <h3 class="roi-title">Value & Time ROI Guarantee</h3>
+                        <p class="roi-desc">We build solutions that make business sense. If our custom-built workflows or automation pipelines do not save you at least 10 hours in the first month of deployment, we will refund your payment in full. No questions asked.</p>
+                    </div>
+                    <div class="roi-right">
+                        <div style="font-size: 2.2rem; margin-bottom: 12px;">💬</div>
+                        <h4 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 8px;">Direct Founder WhatsApp</h4>
+                        <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.6; margin-bottom: 24px;">Skip the forms and get answers instantly. Connect with our founder on WhatsApp for a quick discussion or a custom quote.</p>
+                        <a href="https://wa.me/919123135001?text=Hi%20AwebAI!%20I%20want%20to%20discuss%20a%20project." target="_blank" style="display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 24px; background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; text-decoration:none; border-radius:30px; font-size:.9rem; font-weight:600; transition:all 0.3s ease; box-shadow: 0 10px 20px rgba(37,211,102,0.15);">
+                            💬 Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA MODULE -->
-        <section class="sec" style="background:var(--bg2);" aria-label="Call to action section">
+        <section class="sec" style="background:var(--bg2); padding: 80px 0;" aria-label="CTA banner call to action">
             <div class="wrap sa scale">
                 <div class="cta-banner">
                     <div class="sec-label" style="justify-content:center;">Start Today</div>
@@ -189,11 +670,8 @@
                 <div class="flogo"><img src="assets/logos/logo.png" alt="AwebAI Footer Logo" loading="lazy"></div>
                 <p class="fdesc">Modern web development & AI solutions for startups, businesses and creators. Building the future, one product at a time.</p>
                 <div class="fsoc">
-                    <a href="#" aria-label="Follow us on X">𝕏</a>
-                    <a href="#" aria-label="Follow us on LinkedIn">in</a>
-                    <a href="#" aria-label="Follow us on YouTube">▶</a>
-                    <a href="#" aria-label="Follow us on Instagram">📸</a>
-                    <a href="#" aria-label="Follow us on GitHub">🐙</a>
+                    <a href="https://www.linkedin.com/company/awebai/" target="_blank" aria-label="Follow us on LinkedIn">in</a>
+                    <a href="https://wa.me/919123135001?text=Hi%20AwebAI!%20I%20want%20to%20discuss%20a%20project." target="_blank" aria-label="Contact us on WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.729-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.63-1.023-5.101-2.887-6.967C16.586 1.87 14.12 .845 11.49.845c-5.447 0-9.88 4.417-9.884 9.848-.002 1.71.448 3.385 1.306 4.869l-1.02 3.724 3.825-.992zM18.64 14.94c-.29-.145-1.72-.848-1.98-.946-.265-.098-.46-.145-.655.145-.19.29-.75.946-.92 1.139-.17.19-.34.215-.63.07-1.125-.563-1.87-1.03-2.614-2.3-.195-.336-.195-.55.07-.816.24-.24.53-.615.63-.82.1-.205.05-.38-.025-.526-.075-.145-.655-1.58-.895-2.164-.235-.572-.475-.495-.655-.505-.17-.008-.365-.008-.56-.008s-.515.07-.785.38c-.27.29-1.03 1.007-1.03 2.457s1.057 2.85 1.2 3.04c.145.19 2.08 3.178 5.04 4.455.703.303 1.25.485 1.677.62.707.225 1.35.193 1.86.118.57-.085 1.72-.704 1.96-1.385.24-.68.24-1.265.17-1.385-.07-.12-.265-.19-.555-.335z"/></svg></a>
                 </div>
             </div>
             <div>
@@ -222,11 +700,11 @@
             <div>
                 <div class="fcol-title">Services</div>
                 <ul class="flinks">
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">AI Agents & Automation</a></li>
-                    <li><a href="services.html">Analytics & Business Automation</a></li>
-                    <li><a href="services.html">SaaS Development</a></li>
-                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ai-agents-automation.html">AI Agents & Automation</a></li>
+                    <li><a href="analytics-automation.html">Analytics & Business Automation</a></li>
+                    <li><a href="saas-product-development.html">SaaS Development</a></li>
+                    <li><a href="ui-ux-design.html">UI/UX Design</a></li>
                     <li><a href="cloud-api-integration.html">Cloud & API Integration</a></li>
                 </ul>
             </div>
@@ -236,14 +714,13 @@
                     <li><a href="mailto:awebai07@gmail.com">awebai07@gmail.com</a></li>
                     <li><a href="tel:+919123135001">+91 91231 35001</a></li>
                     <li><a href="https://wa.me/919123135001" target="_blank">WhatsApp</a></li>
-                    <li><a href="#">India · Remote Worldwide</a></li>
                 </ul>
                 <a href="https://wa.me/919123135001" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;text-decoration:none;border-radius:8px;font-size:.82rem;font-weight:600;margin-top:18px;">💬 WhatsApp Us</a>
             </div>
         </div>
         <div class="footer-bot">
             <div class="fcopy">© 2026 AwebAI.tech · All rights reserved.</div>
-            <div class="flegal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            <div class="flegal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
         </div>
     </footer>
 
@@ -281,6 +758,174 @@
     <script src="js/navigation.js" defer></script>
     <script src="js/animations.js" defer></script>
     <script src="js/chatbot.js" defer></script>
+    <!-- Interactive Money-themed Constellation Animation Script -->
+    <script>
+    (function() {
+        const canvas = document.getElementById('pricing-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        
+        let width = canvas.width = canvas.offsetWidth;
+        let height = canvas.height = canvas.offsetHeight;
+        
+        const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                width = canvas.width = entry.contentRect.width || canvas.offsetWidth;
+                height = canvas.height = entry.contentRect.height || canvas.offsetHeight;
+            }
+        });
+        resizeObserver.observe(canvas);
+        
+        const particles = [];
+        const particleCount = 38;
+        const connectionDistance = 130;
+        const mouse = { x: null, y: null, radius: 150 };
+        
+        canvas.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+        
+        canvas.addEventListener('mouseleave', () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+        
+        class MoneyParticle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.7;
+                this.vy = (Math.random() - 0.5) * 0.7;
+                this.type = Math.floor(Math.random() * 3); // 0: Coin, 1: Dollar, 2: Dot
+                this.size = Math.random() * 12 + 10;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spinSpeed = (Math.random() - 0.5) * 0.05;
+                this.pulse = Math.random() * Math.PI;
+                const colors = ['#22c55e', '#10b981', '#00d4ff', '#eab308']; // Green, Emerald, Cyan, Gold
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.angle += this.spinSpeed;
+                this.pulse += 0.015;
+                
+                if (this.x < 0 || this.x > width) this.vx *= -1;
+                if (this.y < 0 || this.y > height) this.vy *= -1;
+                
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const dist = Math.hypot(dx, dy);
+                    if (dist < mouse.radius) {
+                        const force = (mouse.radius - dist) / mouse.radius;
+                        this.x += (dx / dist) * force * 0.8;
+                        this.y += (dy / dist) * force * 0.8;
+                    }
+                }
+            }
+            
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                
+                const pulseScale = 1 + Math.sin(this.pulse) * 0.12;
+                ctx.scale(pulseScale, pulseScale);
+                
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+                
+                if (this.type === 0) {
+                    // Spinning 3D Coin Effect
+                    const cosVal = Math.abs(Math.cos(this.angle));
+                    ctx.scale(cosVal, 1);
+                    
+                    // Outer Ring
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size, 0, Math.PI * 2);
+                    ctx.strokeStyle = this.color;
+                    ctx.lineWidth = 2.5;
+                    ctx.stroke();
+                    
+                    // Inner Coin Backing
+                    ctx.beginPath();
+                    ctx.arc(0, 0, this.size - 3, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(7, 9, 19, 0.75)';
+                    ctx.fill();
+                    
+                    // Dollar Symbol Inside
+                    ctx.font = `bold ${this.size * 1.15}px 'Outfit', sans-serif`;
+                    ctx.fillStyle = this.color;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('$', 0, 0);
+                } else if (this.type === 1) {
+                    // Floating dollar sign
+                    ctx.rotate(this.angle);
+                    ctx.font = `bold ${this.size * 1.4}px 'Outfit', sans-serif`;
+                    ctx.fillStyle = this.color;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText('$', 0, 0);
+                } else {
+                    // Floating financial trend node
+                    ctx.beginPath();
+                    ctx.arc(0, 0, 4, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+                
+                ctx.restore();
+            }
+        }
+        
+        for (let i = 0; i < particleCount; i++) {
+            particles.push(new MoneyParticle());
+        }
+        
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+            
+            // Financial growth/trend connections
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.hypot(dx, dy);
+                    
+                    if (dist < connectionDistance) {
+                        const alpha = (1 - dist / connectionDistance) * 0.18;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        
+                        const grad = ctx.createLinearGradient(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+                        grad.addColorStop(0, particles[i].color);
+                        grad.addColorStop(1, particles[j].color);
+                        
+                        ctx.strokeStyle = grad;
+                        ctx.lineWidth = 0.95;
+                        ctx.globalAlpha = alpha;
+                        ctx.stroke();
+                        ctx.globalAlpha = 1.0;
+                    }
+                }
+            }
+            
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            
+            requestAnimationFrame(animate);
+        }
+        
+        animate();
+    })();
+    </script>
 </body>
 
 </html>

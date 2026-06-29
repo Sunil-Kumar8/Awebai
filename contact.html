@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico">
 </head>
 
@@ -82,94 +83,237 @@
     <!-- MAIN CONTENTS -->
     <div class="page">
         <!-- ══ CONTACT US ══ -->
-        <section class="sec" style="background:var(--bg);" aria-label="Contact us details and form">
+        <section class="contact-hero" aria-label="Contact us details and form">
             <div class="wrap">
-                <div class="sec-label sa up">Connect With Us</div>
-                <h1 class="sec-title sa up sa-d1">Let's Build Something <span class="grad">Extraordinary</span></h1>
-                <p class="sec-sub sa up sa-d2">Have an idea or a project in mind? Fill out the form or message us on WhatsApp to discuss details directly.</p>
-
-                <div class="contact-grid">
-                    <!-- Contact Info Column -->
-                    <div class="cinfo sa left">
-                        <!-- Card 1: Email -->
-                        <div class="cicard">
-                            <div class="ci-icon">✉️</div>
-                            <div>
-                                <div class="ci-label">Email Us</div>
-                                <div class="ci-val"><a href="mailto:awebai07@gmail.com">awebai07@gmail.com</a></div>
+                <div class="contact-layout-grid">
+                    <!-- Left Column: Contact Info -->
+                    <div class="contact-info-col sa left">
+                        <div class="get-in-touch-label">Get in Touch</div>
+                        <h1 class="contact-hero-title">Let's Build Something <br>Amazing Together</h1>
+                        <p class="contact-hero-desc">Have a project idea or need expert guidance? We're here to help you integrate, automate, and scale your business.</p>
+                        
+                        <!-- Stacked Contact Cards -->
+                        <!-- Email Card -->
+                        <div class="contact-info-card">
+                            <div class="card-icon-box email-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="card-content-area">
+                                <div class="card-label">Email Us</div>
+                                <div class="card-value"><a href="mailto:awebai07@gmail.com">awebai07@gmail.com</a></div>
+                                <div class="card-subtext">We reply to all inquiries within 24 hours.</div>
                             </div>
                         </div>
 
-                        <!-- Card 2: Phone -->
-                        <div class="cicard">
-                            <div class="ci-icon">📞</div>
-                            <div>
-                                <div class="ci-label">Call Us</div>
-                                <div class="ci-val"><a href="tel:+919123135001">+91 91231 35001</a></div>
+                        <!-- Call Card -->
+                        <div class="contact-info-card">
+                            <div class="card-icon-box phone-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="card-content-area">
+                                <div class="card-label">Call Us</div>
+                                <div class="card-value"><a href="tel:+919123135001">+91 91231 35001</a></div>
+                                <div class="card-subtext">Mon - Sat, 9:00 AM - 7:00 PM IST</div>
                             </div>
                         </div>
 
-                        <!-- Card 3: WhatsApp Direct -->
-                        <a href="https://wa.me/919123135001?text=Hi%20AwebAI!%20I%20want%20to%20discuss%20a%20project." target="_blank" class="wa-btn">
-                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                            WhatsApp Quick Chat
+                        <!-- WhatsApp Direct Banner -->
+                        <a href="https://wa.me/919123135001?text=Hi%20AwebAI!%20I%20want%20to%20discuss%20a%20project." target="_blank" class="whatsapp-banner-card">
+                            <div class="wa-banner-left">
+                                <div class="wa-banner-icon">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12.004 2C6.48 2 2.001 6.477 2 12.004c0 1.907.533 3.698 1.464 5.232L2 22l4.91-.963c1.503.82 3.202 1.253 4.937 1.253h.005c5.524 0 10.003-4.477 10.004-10.004C22.007 6.477 17.527 2 12.004 2zM17.15 16.022c-.22.613-1.077 1.144-1.637 1.252-.464.09-.915.158-2.955-.66-2.61-.1.03-4.66-3.826-6.196-5.187L6.4 11.238c-.3-.21-.365-.487-.033-.82.165-.166.432-.482.597-.73.165-.248.215-.43.098-.73-.082-.165-.662-1.588-.908-2.18-.24-.576-.484-.499-.663-.509-.163-.008-.35-.008-.535-.008s-.485.07-.74.348c-.255.28-1.07 1.047-1.07 2.55s1.103 2.95 1.25 3.15c.15.2 2.164 3.298 5.242 4.627.733.316 1.305.505 1.75.647.74.234 1.41.201 1.942.122.593-.088 1.792-.732 2.043-1.442.25-.71.25-1.32.176-1.442-.075-.123-.274-.197-.568-.344z"/>
+                                    </svg>
+                                </div>
+                                <div class="wa-banner-text">
+                                    <div class="wa-banner-title">WhatsApp Quick Chat</div>
+                                    <div class="wa-banner-subtitle">Chat with us instantly on WhatsApp</div>
+                                </div>
+                            </div>
+                            <div class="wa-banner-arrow">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </div>
                         </a>
 
-                        <!-- Social Follow Grid -->
-                        <div class="social-follow-card">
-                            <div class="social-follow-label">Follow Our Updates</div>
-                            <div class="social-follow-flex">
-                                <a href="#" class="social-link" aria-label="X">𝕏</a>
-                                <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                                <a href="#" class="social-link" aria-label="YouTube">▶</a>
-                                <a href="#" class="social-link" aria-label="GitHub">🐙</a>
+                        <!-- Social Follow updates -->
+                        <div class="social-updates-card">
+                            <div class="social-updates-label">Follow Our Updates</div>
+                            <div class="social-icons-flex">
+                                <a href="https://x.com/" target="_blank" class="social-icon-box" aria-label="Follow us on X">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/company/awebai/" target="_blank" class="social-icon-box" aria-label="Follow us on LinkedIn">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://youtube.com/" target="_blank" class="social-icon-box" aria-label="Subscribe on YouTube">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.107C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.388.511a3.003 3.003 0 0 0-2.11 2.107C0 8.053 0 12 0 12s0 3.947.502 5.837a3.003 3.003 0 0 0 2.11 2.107c1.883.511 9.388.511 9.388.511s7.505 0 9.388-.511a3.003 3.003 0 0 0 2.11-2.107C24 15.947 24 12 24 12s0-3.947-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://instagram.com/" target="_blank" class="social-icon-box" aria-label="Follow us on Instagram">
+                                    <svg viewBox="0 0 24 24">
+                                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845a1.44 1.44 0 1 0 0-2.881 1.44 1.44 0 0 0 0 2.881z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Location Card -->
+                        <div class="contact-info-card">
+                            <div class="card-icon-box location-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="card-content-area">
+                                <div class="card-label">Our Location</div>
+                                <div class="card-value">AwebAI Solutions Pvt. Ltd.</div>
+                                <div class="card-subtext">Bangalore, Karnataka, India</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Contact Form Column -->
-                    <div class="sa right">
-                        <form class="cform" onsubmit="event.preventDefault(); submitForm(document.getElementById('submitBtn'));" aria-label="Request quote inquiry form">
-                            <div class="cform-title">Send A Message</div>
-                            <div class="cform-sub">We reply to all inquiries within 24 hours, guaranteed.</div>
+                    <!-- Right Column: Contact Form Card -->
+                    <div class="contact-form-card sa right">
+                        <div class="form-header-area">
+                            <div class="form-card-title">Send A Message</div>
+                            <div class="form-card-subtitle">We reply to all inquiries within 24 hours, guaranteed.</div>
+                        </div>
 
-                            <div class="frow">
-                                <div class="fg">
-                                    <label class="fl" for="fname">First Name</label>
-                                    <input class="fi" type="text" id="fname" placeholder="Jane" required>
+                        <form class="contact-form-wrapper" onsubmit="event.preventDefault(); submitForm(document.getElementById('submitBtn'));" aria-label="Request quote inquiry form">
+                            <!-- Row 1: First Name & Last Name -->
+                            <div class="form-row-2col">
+                                <div class="form-field-group">
+                                    <label class="field-label" for="fname">First Name</label>
+                                    <input class="field-input" type="text" id="fname" placeholder="Jane" required>
                                 </div>
-                                <div class="fg">
-                                    <label class="fl" for="lname">Last Name</label>
-                                    <input class="fi" type="text" id="lname" placeholder="Doe">
+                                <div class="form-field-group">
+                                    <label class="field-label" for="lname">Last Name</label>
+                                    <input class="field-input" type="text" id="lname" placeholder="Doe">
                                 </div>
                             </div>
 
-                            <div class="fg">
-                                <label class="fl" for="email">Work Email</label>
-                                <input class="fi" type="email" id="email" placeholder="jane@company.com" required>
+                            <!-- Row 2: Work Email -->
+                            <div class="form-field-group">
+                                <label class="field-label" for="email">Work Email</label>
+                                <input class="field-input" type="email" id="email" placeholder="jane@company.com" required>
                             </div>
 
-                            <div class="fg">
-                                <label class="fl" for="serviceSelect">Service Desired</label>
-                                <select class="fs" id="serviceSelect">
-                                    <option value="web">Web Development (Next.js/React)</option>
-                                    <option value="ai">Custom AI chatbot / LLM Solution</option>
-                                    <option value="automation">Analytics & Business Automation (Data Analytics Dashboards)</option>
-                                    <option value="saas">SaaS Product Development</option>
-                                    <option value="other">Other Digital Solution</option>
-                                </select>
+                            <!-- Row 3: Service Desired -->
+                            <div class="form-field-group">
+                                <label class="field-label" for="serviceSelect">Service Desired</label>
+                                <div class="select-dropdown-container">
+                                    <select class="field-select" id="serviceSelect">
+                                        <option value="web">Web Development (Next.js/React)</option>
+                                        <option value="ai">Custom AI chatbot / LLM Solution</option>
+                                        <option value="automation">Analytics & Business Automation (Data Analytics Dashboards)</option>
+                                        <option value="saas">SaaS Product Development</option>
+                                        <option value="other">Other Digital Solution</option>
+                                    </select>
+                                    <div class="select-arrow-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="6 9 12 15 18 9"></polyline>
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="fg">
-                                <label class="fl" for="msgText">Project Details</label>
-                                <textarea class="ft" id="msgText" placeholder="Describe what you want to build, timelines, or requirements..." required></textarea>
+                            <!-- Row 4: Project Details -->
+                            <div class="form-field-group">
+                                <label class="field-label" for="msgText">Project Details</label>
+                                <textarea class="field-textarea" id="msgText" placeholder="Describe what you want to build, timelines, or requirements..." required></textarea>
                             </div>
 
-                            <button class="fsub" type="submit" id="submitBtn">
+                            <!-- Row 5: Submit Button -->
+                            <button class="form-submit-btn" type="submit" id="submitBtn">
                                 Send Inquiry
-                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
                             </button>
+
+                            <!-- Row 6: Safety Footer -->
+                            <div class="form-footer-note">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                                Your information is safe with us. We never share your data.
+                            </div>
                         </form>
+                    </div>
+                </div>
+
+                <!-- Bottom Features Banner -->
+                <div class="features-banner-container sa scale">
+                    <div class="features-banner-grid">
+                        <!-- Quick Response -->
+                        <div class="feature-column-item">
+                            <div class="feature-icon-circle clock">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="feature-text-block">
+                                <div class="feature-col-title">Quick Response</div>
+                                <div class="feature-col-desc">We respond within 24 hours</div>
+                            </div>
+                        </div>
+
+                        <!-- Trusted & Secure -->
+                        <div class="feature-column-item">
+                            <div class="feature-icon-circle shield">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-text-block">
+                                <div class="feature-col-title">Trusted & Secure</div>
+                                <div class="feature-col-desc">Your data is safe and protected</div>
+                            </div>
+                        </div>
+
+                        <!-- Expert Support -->
+                        <div class="feature-column-item">
+                            <div class="feature-icon-circle support">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="feature-text-block">
+                                <div class="feature-col-title">Expert Support</div>
+                                <div class="feature-col-desc">Get help from our experienced team</div>
+                            </div>
+                        </div>
+
+                        <!-- On-Time Delivery -->
+                        <div class="feature-column-item">
+                            <div class="feature-icon-circle delivery">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="22 2 11 13"></polyline>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="feature-text-block">
+                                <div class="feature-col-title">On-Time Delivery</div>
+                                <div class="feature-col-desc">We ensure quality work delivered on time</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -183,11 +327,8 @@
                 <div class="flogo"><img src="assets/logos/logo.png" alt="AwebAI Footer Logo" loading="lazy"></div>
                 <p class="fdesc">Modern web development & AI solutions for startups, businesses and creators. Building the future, one product at a time.</p>
                 <div class="fsoc">
-                    <a href="#" aria-label="Follow us on X">𝕏</a>
-                    <a href="#" aria-label="Follow us on LinkedIn">in</a>
-                    <a href="#" aria-label="Follow us on YouTube">▶</a>
-                    <a href="#" aria-label="Follow us on Instagram">📸</a>
-                    <a href="#" aria-label="Follow us on GitHub">🐙</a>
+                    <a href="https://www.linkedin.com/company/awebai/" target="_blank" aria-label="Follow us on LinkedIn">in</a>
+                    <a href="https://wa.me/919123135001?text=Hi%20AwebAI!%20I%20want%20to%20discuss%20a%20project." target="_blank" aria-label="Contact us on WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.729-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.852.002-2.63-1.023-5.101-2.887-6.967C16.586 1.87 14.12 .845 11.49.845c-5.447 0-9.88 4.417-9.884 9.848-.002 1.71.448 3.385 1.306 4.869l-1.02 3.724 3.825-.992zM18.64 14.94c-.29-.145-1.72-.848-1.98-.946-.265-.098-.46-.145-.655.145-.19.29-.75.946-.92 1.139-.17.19-.34.215-.63.07-1.125-.563-1.87-1.03-2.614-2.3-.195-.336-.195-.55.07-.816.24-.24.53-.615.63-.82.1-.205.05-.38-.025-.526-.075-.145-.655-1.58-.895-2.164-.235-.572-.475-.495-.655-.505-.17-.008-.365-.008-.56-.008s-.515.07-.785.38c-.27.29-1.03 1.007-1.03 2.457s1.057 2.85 1.2 3.04c.145.19 2.08 3.178 5.04 4.455.703.303 1.25.485 1.677.62.707.225 1.35.193 1.86.118.57-.085 1.72-.704 1.96-1.385.24-.68.24-1.265.17-1.385-.07-.12-.265-.19-.555-.335z"/></svg></a>
                 </div>
             </div>
             <div>
@@ -215,11 +356,11 @@
             <div>
                 <div class="fcol-title">Services</div>
                 <ul class="flinks">
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">AI Agents & Automation</a></li>
-                    <li><a href="services.html">Analytics & Business Automation</a></li>
-                    <li><a href="services.html">SaaS Development</a></li>
-                    <li><a href="services.html">UI/UX Design</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="ai-agents-automation.html">AI Agents & Automation</a></li>
+                    <li><a href="analytics-automation.html">Analytics & Business Automation</a></li>
+                    <li><a href="saas-product-development.html">SaaS Development</a></li>
+                    <li><a href="ui-ux-design.html">UI/UX Design</a></li>
                     <li><a href="cloud-api-integration.html">Cloud & API Integration</a></li>
                 </ul>
             </div>
@@ -229,14 +370,13 @@
                     <li><a href="mailto:awebai07@gmail.com">awebai07@gmail.com</a></li>
                     <li><a href="tel:+919123135001">+91 91231 35001</a></li>
                     <li><a href="https://wa.me/919123135001" target="_blank">WhatsApp</a></li>
-                    <li><a href="#">India · Remote Worldwide</a></li>
                 </ul>
                 <a href="https://wa.me/919123135001" target="_blank" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;text-decoration:none;border-radius:8px;font-size:.82rem;font-weight:600;margin-top:18px;">💬 WhatsApp Us</a>
             </div>
         </div>
         <div class="footer-bot">
             <div class="fcopy">© 2026 AwebAI.tech · All rights reserved.</div>
-            <div class="flegal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+            <div class="flegal"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div>
         </div>
     </footer>
 
